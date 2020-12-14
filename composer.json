@@ -1,0 +1,12 @@
+{
+    "name": "mcdev/casts",
+    "description": "Pacote com uma coleçao de casts para Laravel 7 ou superior'\u001b[D\u001b[D",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcel Cunha",
+            "email": "marcel.cunha.mc@gmail.com"
+        }
+    ],
+    "require": {}
+}
