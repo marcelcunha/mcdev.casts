@@ -2,10 +2,11 @@
 
 namespace App\Casts;
 
+use Carbon\Carbon;
 use DateTime;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
-class DateCast implements CastsAttributes
+class DateTimeCast implements CastsAttributes
 {
     /**
      * Cast the given value.
@@ -18,7 +19,7 @@ class DateCast implements CastsAttributes
      */
     public function get($model, $key, $value, $attributes)
     {
-        return (new DateTime($value))->format('d/m/Y');
+        return (new DateTime($value))->format('d/m/Y H:i:s');
     }
 
     /**
