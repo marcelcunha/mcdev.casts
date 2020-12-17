@@ -4,7 +4,7 @@ namespace MCDev\Casts;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
-class PriceCast implements CastsAttributes
+class MoneyRealCast implements CastsAttributes
 {
     /**
      * Cast the given value.
@@ -17,7 +17,7 @@ class PriceCast implements CastsAttributes
      */
     public function get($model, $key, $value, $attributes)
     {
-        return number_format($value, 2, ',', '.');
+        return 'R$ '.number_format($value, 2, ',', '.');
     }
 
     /**
