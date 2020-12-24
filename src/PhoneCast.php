@@ -17,7 +17,7 @@ class PhoneCast implements CastsAttributes
      */
     public function get($model, $key, $value, $attributes)
     {
-        $pattern = strlen($value) > 10 ? '/(\d{2})(\d{5})(\d{4})/' : '/(\d{2})(\d{5})(\d{4})/';
+        $pattern = strlen($value) > 10 ? '/(\d{2})(\d{5})(\d{4})/' : '/(\d{2})(\d{4})(\d{4})/';
 
         return preg_replace($pattern, '($1) $2-$3', $value);
     }
