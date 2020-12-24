@@ -31,6 +31,6 @@ class MoneyRealCast implements CastsAttributes
      */
     public function set($model, $key, $value, $attributes)
     {
-        return substr_replace(str_replace([',','.'],'', $value), '.',-2,0);
+        return substr_replace(preg_replace('/\D+/', '', $value), '.',-2,0);
     }
 }
